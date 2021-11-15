@@ -1,6 +1,7 @@
 package com.ibee.authorization.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -18,14 +19,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final String USER = "jefalves@gmail.com";
     private final String PASSWORD = "123456789";
-    private final String ADMIN = "ADMIN";
+    private final String ROLE = "ADMIN";
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
                 .withUser(USER)
                 .password(passwordEncoder.encode(PASSWORD))
-                .roles(ADMIN);
+                .roles(ROLE);
     }
 
     @Bean
