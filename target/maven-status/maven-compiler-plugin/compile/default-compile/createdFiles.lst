@@ -1,3 +1,2 @@
 com/ibee/authorization/AuthorizationApplication.class
-com/ibee/authorization/security/AuthorizationServerConfig.class
 com/ibee/authorization/configs/BeansConfiguration.class
