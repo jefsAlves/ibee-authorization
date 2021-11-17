@@ -21,6 +21,11 @@ public class AuthorizationMessage {
     public static final String REDIRECT_URI = "http://ibee-application";
     public static final String AUTHORIZATION_CODE = "authorization_code";
 
+    public static final String CLIENT_ID_IMPLICIT = "ibee-app-implicit";
+    public static final String CLIENT_SECRET_IMPLICIT = "Jo82ksR4a2Zx6pixC5qwD1";
+    public static final String IMPLICIT = "implicit";
+    public static final String REDIRECT_URI_IMPLICIT = "http://ibee-app";
+
 
 
 }
