@@ -37,7 +37,18 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                     .accessTokenValiditySeconds(30)
                 .and()
                     .withClient(AuthorizationMessage.CLIENT_ID_RS)
-                    .secret(passwordEncoder.encode(AuthorizationMessage.CLIENT_SECRET_RS));
+                    .secret(passwordEncoder.encode(AuthorizationMessage.CLIENT_SECRET_RS))
+                .and()
+                    .withClient(AuthorizationMessage.CLIENT_ID_API)
+                    .secret(passwordEncoder.encode(AuthorizationMessage.CLIENT_SECRET_API))
+                    .authorizedGrantTypes(AuthorizationMessage.CLIENT_CREDENTIALS)
+                    .scopes(AuthorizationMessage.SCOPE_READ)
+                .and()
+                    .withClient(AuthorizationMessage.CLIENT_ID_FRONT)
+                    .secret(passwordEncoder.encode(AuthorizationMessage.CLIENT_SECRET_FRONT))
+                    .authorizedGrantTypes(AuthorizationMessage.AUTHORIZATION_CODE)
+                    .scopes(AuthorizationMessage.SCOPE_WRITE, AuthorizationMessage.SCOPE_READ)
+                    .redirectUris(AuthorizationMessage.REDIRECT_URI);
     }
 
     @Override
