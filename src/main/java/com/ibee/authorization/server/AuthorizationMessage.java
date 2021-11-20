@@ -26,6 +26,4 @@ public class AuthorizationMessage {
     public static final String IMPLICIT = "implicit";
     public static final String REDIRECT_URI_IMPLICIT = "http://ibee-app";
 
-
-
 }

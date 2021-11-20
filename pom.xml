@@ -55,6 +55,12 @@
 			<version>${javax-jaxb.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-jwt</artifactId>
+			<version>1.0.11.RELEASE</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
