@@ -1,2 +1,9 @@
 server:
   port: 8020
+
+ibee:
+  jwt:
+    keystore:
+      path: keystores/ibee.jks
+      password: 12345679
+      alias: ibee
