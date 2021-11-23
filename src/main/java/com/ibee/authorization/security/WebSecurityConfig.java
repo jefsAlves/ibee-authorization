@@ -18,17 +18,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    private final String USER = "jefalves@gmail.com";
-    private final String PASSWORD = "123456789";
-    private final String ROLE = "ADMIN";
+//    private final String USER = "jefalves@gmail.com";
+//    private final String PASSWORD = "123456789";
+//    private final String ROLE = "ADMIN";
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication()
-                .withUser(USER)
-                .password(passwordEncoder.encode(PASSWORD))
-                .roles(ROLE);
-    }
+//    @Override
+//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//        auth.inMemoryAuthentication()
+//                .withUser(USER)
+//                .password(passwordEncoder.encode(PASSWORD))
+//                .roles(ROLE);
+//    }
 
     @Bean
     @Override
@@ -36,10 +36,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         return super.authenticationManager();
     }
 
-    @Bean
-    @Override
-    protected UserDetailsService userDetailsService() {
-        return super.userDetailsService();
-    }
+//    @Bean
+//    @Override
+//    protected UserDetailsService userDetailsService() {
+//        return super.userDetailsService();
+//    }
 
 }

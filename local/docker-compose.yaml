@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  db-base:
+    image: postgres:10
+    container_name: db-postgres
+    restart: always
+    tty: true
+    environment:
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=ibee-authorization
+    ports:
+      - "5432:5432"
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    tty: true
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@user.com
+      - PGADMIN_DEFAULT_PASSWORD=123456789
+    ports:
+      - "8010:80"
+    depends_on:
+      - db-base
+

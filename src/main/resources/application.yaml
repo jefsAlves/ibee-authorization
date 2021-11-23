@@ -1,9 +1,25 @@
 server:
   port: 8020
 
+spring:
+  datasource:
+    hikari:
+      idle-timeout: 10000
+      maximum-pool-size: 30
+      minimum-idle: 20
+    password: root
+    url: jdbc:postgresql://localhost:5432/ibee-authorization?createDatabaseIfNotExist=true&serverTimezone=UTC
+    username: postgres
+
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+
 ibee:
   jwt:
     keystore:
       path: keystores/ibee.jks
       password: 12345679
       alias: ibee
+

@@ -1,4 +1,16 @@
+com/ibee/authorization/model/entities/Users.class
 com/ibee/authorization/AuthorizationApplication.class
+com/ibee/authorization/model/services/impl/UsersLoadServiceImpl.class
+com/ibee/authorization/server/AuthorizationMessage.class
+com/ibee/authorization/model/services/impl/UsersServiceImpl.class
+com/ibee/authorization/model/services/UsersService.class
+com/ibee/authorization/security/WebSecurityConfig.class
+com/ibee/authorization/model/exceptions/ExceptionMessage.class
+com/ibee/authorization/infra/mapper/UsersMapper.class
+com/ibee/authorization/model/exceptions/BusinessException.class
 com/ibee/authorization/configs/BeansConfiguration.class
 com/ibee/authorization/server/PkceAuthorizationCodeTokenGranter.class
+com/ibee/authorization/infra/repository/UsersRepository.class
 com/ibee/authorization/server/AuthorizationServerConfig.class
+com/ibee/authorization/infra/dto/UsersDTO.class
+com/ibee/authorization/security/JWTUtil.class
