@@ -1,6 +1,5 @@
 package com.ibee.authorization.model.services.impl;
 
-import com.ibee.authorization.model.exceptions.BusinessException;
 import com.ibee.authorization.model.entities.Users;
 import com.ibee.authorization.infra.repository.UsersRepository;
 import com.ibee.authorization.model.exceptions.ExceptionMessage;
@@ -26,11 +25,11 @@ public class UsersLoadServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String user) throws UsernameNotFoundException {
         var users = verifyUserExist(user);
-        return new User(users.getEmail(), passwordEncoder.encode(users.getPassword()), Collections.emptyList());
+        return new User(users.getUser(), passwordEncoder.encode(users.getPassword()), Collections.emptyList());
     }
 
     private Users verifyUserExist(String user) {
-        var users = usersRepository.findByEmail(user);
+        var users = usersRepository.findByUser(user);
         if(user == null) {
             throw new UsernameNotFoundException(ExceptionMessage.USER_NOT_FOUND);
         }
