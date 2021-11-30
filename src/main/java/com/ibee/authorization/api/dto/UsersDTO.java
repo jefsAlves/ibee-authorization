@@ -1,10 +1,12 @@
 package com.ibee.authorization.api.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.codehaus.jackson.annotate.JsonProperty;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @NoArgsConstructor
 @Getter
 @Setter

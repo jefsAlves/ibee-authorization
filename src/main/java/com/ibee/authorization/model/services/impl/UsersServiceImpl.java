@@ -66,10 +66,9 @@ public class UsersServiceImpl implements UsersService {
     @Transactional
     public UsersDTO createUser(UsersDTO usersDTO) {
         var user = mapper.toEntity(usersDTO);
-        userUtil.validateUserBeforeCreate(user.getUser());
+        userUtil.validateUser(user);
         usersRepository.save(user);
-        return mapper.toDTO(user);
-//        return new UsersDTO(usersDTO.getUser());
+        return new UsersDTO(usersDTO.getUser());
     }
 
     @Transactional
